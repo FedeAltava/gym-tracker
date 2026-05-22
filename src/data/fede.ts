@@ -1,0 +1,172 @@
+import type { Person } from '../types/training';
+
+export const fedeData: Person = {
+  id: 'fede',
+  name: 'Fede',
+  days: [
+    {
+      day: 'LUNES',
+      label: 'Upper A · Pecho + Tríceps',
+      exercises: [
+        {
+          name: 'Máquina Presa de Pecho',
+          series: 3,
+          reps: '8-10',
+          rest: '90-120s',
+          notes: 'Movimiento principal. Controla excéntrica (2-3s)',
+        },
+        {
+          name: 'Press Militar Mancuerna/Barra',
+          series: 3,
+          reps: '8-10',
+          rest: '90s',
+          notes: 'Peso moderado-alto. Hombros anteriores también',
+        },
+        {
+          name: 'Máquina Fondos Asistida',
+          series: 3,
+          reps: '10-12',
+          rest: '75s',
+          notes: 'Excelente para tríceps. Ajusta peso para llegar a fallo',
+        },
+        {
+          name: 'Máquina Flyes de Pecho',
+          series: 2,
+          reps: '12-15',
+          rest: '60s',
+          notes: 'Accesorio. Contracción máxima al final',
+        },
+        {
+          name: 'Extensión Tríceps en Máquina',
+          series: 2,
+          reps: '12-15',
+          rest: '60s',
+          notes: 'Aislamiento final. Foco en quemazón',
+        },
+      ],
+    },
+    {
+      day: 'MARTES',
+      label: 'Lower A · Piernas',
+      exercises: [
+        {
+          name: 'Máquina Prensa de Piernas',
+          series: 3,
+          reps: '8-10',
+          rest: '120s',
+          notes: 'Movimiento principal. Pie ancho para glúteos',
+        },
+        {
+          name: 'Máquina Leg Curl (Isquios)',
+          series: 3,
+          reps: '10-12',
+          rest: '90s',
+          notes: 'Flexión de rodilla. Control excéntrico',
+        },
+        {
+          name: 'Máquina Extensoras de Cuádriceps',
+          series: 3,
+          reps: '12-15',
+          rest: '75s',
+          notes: 'Aislamiento cuádriceps. Rango completo',
+        },
+        {
+          name: 'Máquina Abductores (Glúteos)',
+          series: 2,
+          reps: '15-20',
+          rest: '60s',
+          notes: 'Hipertrofia glútea. Control del movimiento',
+        },
+        {
+          name: 'Prensa de Pantorrillas (o Máquina)',
+          series: 2,
+          reps: '15-20',
+          rest: '60s',
+          notes: 'Accesorio. Pantorrillas',
+        },
+      ],
+    },
+    {
+      day: 'JUEVES',
+      label: 'Upper B · Espalda + Bíceps',
+      exercises: [
+        {
+          name: 'Máquina Lat Pulldown (Polea Alta)',
+          series: 3,
+          reps: '8-10',
+          rest: '90-120s',
+          notes: 'Tirón principal. Agarre ancho',
+        },
+        {
+          name: 'Máquina Remo Horizontal (o Pecho)',
+          series: 3,
+          reps: '8-10',
+          rest: '90s',
+          notes: 'Espalda media. Peso controlado',
+        },
+        {
+          name: 'Curl de Bíceps con Mancuerna',
+          series: 3,
+          reps: '10-12',
+          rest: '75s',
+          notes: 'Peso moderado. Controlado',
+        },
+        {
+          name: 'Máquina Remo Sentado (espalda baja)',
+          series: 2,
+          reps: '12-15',
+          rest: '75s',
+          notes: 'Accesorio espalda. Contracción fuerte',
+        },
+        {
+          name: 'Curl de Bíceps en Máquina o Cable',
+          series: 2,
+          reps: '12-15',
+          rest: '60s',
+          notes: 'Aislamiento bíceps. Fallo muscular',
+        },
+      ],
+    },
+    {
+      day: 'VIERNES',
+      label: 'Lower B · Piernas + Core',
+      exercises: [
+        {
+          name: 'Máquina Leg Press (variante alta)',
+          series: 3,
+          reps: '8-10',
+          rest: '120s',
+          notes: 'Movimiento principal. Pie más arriba',
+        },
+        {
+          name: 'Máquina Hip Thrust o Glute Press',
+          series: 3,
+          reps: '10-12',
+          rest: '90s',
+          notes: 'Aislamiento glúteos. Siente la quemazón',
+        },
+        {
+          name: 'Máquina Leg Curl (Isquios)',
+          series: 3,
+          reps: '10-12',
+          rest: '90s',
+          notes: 'Segundo trabajo de isquios',
+        },
+        {
+          name: 'Máquina Abductores',
+          series: 2,
+          reps: '15-20',
+          rest: '60s',
+          notes: 'Accesorio glúteos',
+        },
+        {
+          name: 'Core: Máquina Abdominales o Cable Woodchops',
+          series: 2,
+          reps: '15-20',
+          rest: '60s',
+          notes: 'Fuerza core. Sin exceso de volumen',
+        },
+      ],
+    },
+  ],
+};

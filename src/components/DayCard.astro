@@ -1,0 +1,18 @@
+---
+import type { TrainingDay } from '../types/training';
+import ExerciseList from './ExerciseList.astro';
+
+interface Props {
+  day: TrainingDay;
+}
+
+const { day } = Astro.props;
+---
+
+<div class="day-card">
+  <div class="day-card-header">
+    <span class="day-name">{day.day}</span>
+    <span class="day-label">{day.label}</span>
+  </div>
+  <ExerciseList exercises={day.exercises} />
+</div>

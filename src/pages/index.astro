@@ -1,0 +1,64 @@
+---
+import { fedeData } from '../data/fede';
+import { belenData } from '../data/belen';
+import PersonTabs from '../components/PersonTabs.astro';
+import DayGrid from '../components/DayGrid.astro';
+import '../styles/global.css';
+
+const people = [fedeData, belenData];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Plan de entrenamiento — Fede & Belén" />
+    <title>Gym Tracker · Fede & Belén</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-title">Gym Tracker</div>
+      <PersonTabs people={people} />
+    </header>
+
+    <main>
+      {people.map((person, i) => (
+        <DayGrid days={person.days} personId={person.id} active={i === 0} />
+      ))}
+    </main>
+
+    <script>
+      // ── Tab switching ──────────────────────────────────────────
+      document.querySelectorAll<HTMLButtonElement>('[data-tab-btn]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.dataset.target!;
+
+          // Update tabs
+          document.querySelectorAll('[data-tab-btn]').forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          // Update panels
+          document.querySelectorAll('.person-days').forEach(panel => {
+            panel.classList.remove('active');
+          });
+          document.querySelector(`[data-person="${target}"]`)?.classList.add('active');
+        });
+      });
+
+      // ── Accordion ─────────────────────────────────────────────
+      document.querySelectorAll<HTMLButtonElement>('.exercise-summary').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.exercise-item')!;
+          const isOpen = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(isOpen));
+        });
+      });
+    </script>
+  </body>
+</html>

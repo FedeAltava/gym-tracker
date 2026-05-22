@@ -1,0 +1,23 @@
+---
+import type { Person } from '../types/training';
+
+interface Props {
+  people: Person[];
+}
+
+const { people } = Astro.props;
+---
+
+<div class="person-tabs" role="tablist" aria-label="Selecciona persona">
+  {people.map((person, i) => (
+    <button
+      class:list={['tab-btn', { active: i === 0 }]}
+      data-tab-btn
+      data-target={person.id}
+      role="tab"
+      aria-selected={i === 0 ? 'true' : 'false'}
+    >
+      {person.name}
+    </button>
+  ))}
+</div>

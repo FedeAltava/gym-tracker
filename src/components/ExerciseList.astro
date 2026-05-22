@@ -1,0 +1,16 @@
+---
+import type { Exercise } from '../types/training';
+import ExerciseItem from './ExerciseItem.astro';
+
+interface Props {
+  exercises: Exercise[];
+}
+
+const { exercises } = Astro.props;
+---
+
+<ol class="exercise-list">
+  {exercises.map((exercise, i) => (
+    <ExerciseItem exercise={exercise} index={i} />
+  ))}
+</ol>

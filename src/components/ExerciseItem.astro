@@ -1,0 +1,42 @@
+---
+import type { Exercise } from '../types/training';
+
+interface Props {
+  exercise: Exercise;
+  index: number;
+}
+
+const { exercise, index } = Astro.props;
+---
+
+<li class="exercise-item">
+  <button class="exercise-summary" aria-expanded="false">
+    <span class="exercise-num">{index + 1}</span>
+    <span class="exercise-name">{exercise.name}</span>
+    <span class="exercise-quick">
+      <span class="badge">{exercise.series}×{exercise.reps}</span>
+    </span>
+    <span class="chevron" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </button>
+  <div class="exercise-detail" role="region">
+    <dl class="exercise-stats">
+      <div class="stat">
+        <dt>Series</dt>
+        <dd>{exercise.series}</dd>
+      </div>
+      <div class="stat">
+        <dt>Reps</dt>
+        <dd>{exercise.reps}</dd>
+      </div>
+      <div class="stat">
+        <dt>Descanso</dt>
+        <dd>{exercise.rest}</dd>
+      </div>
+    </dl>
+    <p class="exercise-notes">{exercise.notes}</p>
+  </div>
+</li>

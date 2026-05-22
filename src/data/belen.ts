@@ -1,0 +1,172 @@
+import type { Person } from '../types/training';
+
+export const belenData: Person = {
+  id: 'belen',
+  name: 'Belén',
+  days: [
+    {
+      day: 'LUNES',
+      label: 'Upper A · Pecho + Espalda',
+      exercises: [
+        {
+          name: 'Máquina Presa de Pecho',
+          series: 4,
+          reps: '10-12',
+          rest: '60s',
+          notes: 'Principal. Controla excéntrica (2-3s)',
+        },
+        {
+          name: 'Máquina Lat Pulldown (Espalda)',
+          series: 4,
+          reps: '10-12',
+          rest: '60s',
+          notes: 'Equilibrio. Tirón poderoso',
+        },
+        {
+          name: 'Máquina Flyes de Pecho',
+          series: 3,
+          reps: '12-15',
+          rest: '50s',
+          notes: 'Accesorio pecho. Contracción total',
+        },
+        {
+          name: 'Máquina Remo Sentado (Espalda)',
+          series: 3,
+          reps: '12-15',
+          rest: '50s',
+          notes: 'Espalda media. Fuerza + volumen',
+        },
+        {
+          name: 'Fondos Asistido o Cable Cruce',
+          series: 2,
+          reps: '15-20',
+          rest: '45s',
+          notes: 'Accesorio final. Quemazón',
+        },
+      ],
+    },
+    {
+      day: 'MARTES',
+      label: 'Lower A · Piernas + Glúteos',
+      exercises: [
+        {
+          name: 'Máquina Prensa de Piernas',
+          series: 4,
+          reps: '10-12',
+          rest: '75s',
+          notes: 'Principal. Pie ancho para glúteos',
+        },
+        {
+          name: 'Máquina Hip Thrust o Glute Press',
+          series: 4,
+          reps: '10-12',
+          rest: '60s',
+          notes: 'Aislamiento glúteos (prioridad)',
+        },
+        {
+          name: 'Máquina Leg Curl (Isquios)',
+          series: 3,
+          reps: '12-15',
+          rest: '50s',
+          notes: 'Flexión rodilla. Volumen',
+        },
+        {
+          name: 'Máquina Abductores (Glúteos)',
+          series: 3,
+          reps: '15-20',
+          rest: '45s',
+          notes: 'Aislamiento. Quemazón',
+        },
+        {
+          name: 'Máquina Extensoras Cuádriceps',
+          series: 2,
+          reps: '15-20',
+          rest: '45s',
+          notes: 'Accesorio. Foco en contracción',
+        },
+      ],
+    },
+    {
+      day: 'JUEVES',
+      label: 'Upper B · Espalda + Hombros',
+      exercises: [
+        {
+          name: 'Máquina Remo Horizontal',
+          series: 4,
+          reps: '10-12',
+          rest: '60s',
+          notes: 'Fuerza espalda media. Principal',
+        },
+        {
+          name: 'Máquina Lat Pulldown (variante)',
+          series: 3,
+          reps: '10-12',
+          rest: '60s',
+          notes: 'Espalda ancha. Segundo volumen',
+        },
+        {
+          name: 'Press de Hombros en Máquina',
+          series: 3,
+          reps: '12-15',
+          rest: '50s',
+          notes: 'Hombros. Volumen',
+        },
+        {
+          name: 'Máquina Pájaros Inversos (Deltoides Posterior)',
+          series: 3,
+          reps: '15-20',
+          rest: '45s',
+          notes: 'Hombros posteriores. Aislamiento',
+        },
+        {
+          name: 'Remo bajo en Cable o Máquina',
+          series: 2,
+          reps: '15-20',
+          rest: '45s',
+          notes: 'Espalda baja. Accesorio',
+        },
+      ],
+    },
+    {
+      day: 'VIERNES',
+      label: 'Lower B · Piernas + Core',
+      exercises: [
+        {
+          name: 'Máquina Leg Press (variante cerrada)',
+          series: 3,
+          reps: '10-12',
+          rest: '75s',
+          notes: 'Estímulo diferente. Cuádriceps',
+        },
+        {
+          name: 'Máquina Leg Curl Tumbado (isquios)',
+          series: 3,
+          reps: '10-12',
+          rest: '60s',
+          notes: 'Segundo isquios. Volumen',
+        },
+        {
+          name: 'Máquina Prensa de Pantorrillas',
+          series: 3,
+          reps: '15-20',
+          rest: '45s',
+          notes: 'Pantorrillas. Accesorio',
+        },
+        {
+          name: 'Máquina Abductores (Glúteos)',
+          series: 2,
+          reps: '15-20',
+          rest: '45s',
+          notes: 'Segundo estímulo de glúteos',
+        },
+        {
+          name: 'Core: Máquina Abdominales + Rotaciones Cable',
+          series: 2,
+          reps: '20-25',
+          rest: '40s',
+          notes: 'Core funcional',
+        },
+      ],
+    },
+  ],
+};
