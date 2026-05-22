@@ -31,11 +31,16 @@ html {
   font-size: 16px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
+  /* Prevent layout shift from scrollbar appearing */
+  scrollbar-gutter: stable;
 }
 
 body {
   min-height: 100dvh;
-  padding-bottom: 2rem;
+  /* Safe area for iOS notch/home bar */
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 /* ── Header ────────────────────────────────────────── */
@@ -43,6 +48,8 @@ body {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   padding: 1rem 1.25rem 0;
+  /* Safe area for iOS status bar */
+  padding-top: calc(1rem + env(safe-area-inset-top));
   position: sticky;
   top: 0;
   z-index: 10;
@@ -184,9 +191,12 @@ body {
 }
 
 .exercise-name {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 500;
   line-height: 1.35;
+  /* Allow long names to wrap, never overflow */
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .exercise-quick {

@@ -15,5 +15,9 @@
     "@astrojs/check": "^0.9.9",
     "astro": "^6.3.7",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
   }
 }
