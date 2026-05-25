@@ -90,7 +90,7 @@ export default {
     // 3. Commit updated file
     const commitBody = {
       message: `chore: update ${person} ${day} exercise[${exerciseIndex}] weight to ${weight}kg`,
-      content: btoa(unescape(encodeURIComponent(updated))),
+      content: uint8ToBase64(new TextEncoder().encode(updated)),
       sha,
     };
 
@@ -182,4 +182,16 @@ function updateWeight(source, day, exerciseIndex, newWeight) {
   }
 
   return source.slice(0, targetStart) + updatedBlock + source.slice(targetEnd + 1);
+}
+
+/**
+ * Encode Uint8Array to base64 — handles UTF-8 correctly in Cloudflare Workers.
+ * btoa() alone breaks on non-ASCII characters (tildes, eñes, etc.)
+ */
+function uint8ToBase64(bytes) {
+  let binary = '';
+  for (let i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary);
 }
