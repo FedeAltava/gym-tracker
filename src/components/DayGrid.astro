@@ -14,7 +14,7 @@ const { days, personId, active = false } = Astro.props;
 <div class:list={['person-days', { active }]} data-person={personId}>
   <div class="day-grid">
     {days.map((day) => (
-      <DayCard day={day} />
+      <DayCard day={day} personId={personId} />
     ))}
   </div>
 </div>

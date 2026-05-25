@@ -4,13 +4,15 @@ import ExerciseItem from './ExerciseItem.astro';
 
 interface Props {
   exercises: Exercise[];
+  personId: string;
+  dayId: string;
 }
 
-const { exercises } = Astro.props;
+const { exercises, personId, dayId } = Astro.props;
 ---
 
 <ol class="exercise-list">
   {exercises.map((exercise, i) => (
-    <ExerciseItem exercise={exercise} index={i} />
+    <ExerciseItem exercise={exercise} index={i} personId={personId} dayId={dayId} />
   ))}
 </ol>

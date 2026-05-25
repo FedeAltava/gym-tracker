@@ -55,6 +55,62 @@ const people = [fedeData, belenData];
       });
 
       // ── Accordion ─────────────────────────────────────────────
+      const WORKER_URL = import.meta.env.PUBLIC_WORKER_URL ?? '';
+
+      document.querySelectorAll<HTMLButtonElement>('.weight-save-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const person = btn.dataset.person!;
+          const day = btn.dataset.day!;
+          const exerciseIndex = Number(btn.dataset.exerciseIndex);
+
+          const input = document.querySelector<HTMLInputElement>(
+            `input[data-person="${person}"][data-day="${day}"][data-exercise-index="${exerciseIndex}"]`
+          )!;
+          const statusEl = btn.closest('.weight-row')!.querySelector<HTMLElement>('.weight-status')!;
+
+          const weight = parseFloat(input.value);
+          if (isNaN(weight) || weight < 0) {
+            statusEl.textContent = 'Valor inválido';
+            statusEl.className = 'weight-status error';
+            return;
+          }
+
+          if (!WORKER_URL) {
+            statusEl.textContent = 'Worker no configurado';
+            statusEl.className = 'weight-status error';
+            return;
+          }
+
+          btn.disabled = true;
+          statusEl.textContent = 'Guardando...';
+          statusEl.className = 'weight-status';
+
+          try {
+            const res = await fetch(WORKER_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ person, day, exerciseIndex, weight }),
+            });
+
+            if (res.ok) {
+              statusEl.textContent = '✓ Guardado';
+              statusEl.className = 'weight-status ok';
+              setTimeout(() => { statusEl.textContent = ''; statusEl.className = 'weight-status'; }, 3000);
+            } else {
+              const err = await res.text();
+              statusEl.textContent = `Error: ${err}`;
+              statusEl.className = 'weight-status error';
+            }
+          } catch {
+            statusEl.textContent = 'Sin conexión';
+            statusEl.className = 'weight-status error';
+          } finally {
+            btn.disabled = false;
+          }
+        });
+      });
+
+      // ── Accordion ─────────────────────────────────────────────
       document.querySelectorAll<HTMLButtonElement>('.exercise-summary').forEach(btn => {
         btn.addEventListener('click', () => {
           const item = btn.closest('.exercise-item')!;

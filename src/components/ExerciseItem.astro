@@ -4,9 +4,12 @@ import type { Exercise } from '../types/training';
 interface Props {
   exercise: Exercise;
   index: number;
+  personId: string;
+  dayId: string;
 }
 
-const { exercise, index } = Astro.props;
+const { exercise, index, personId, dayId } = Astro.props;
+const currentWeight = exercise.weight ?? 0;
 ---
 
 <li class="exercise-item">
@@ -15,6 +18,9 @@ const { exercise, index } = Astro.props;
     <span class="exercise-name">{exercise.name}</span>
     <span class="exercise-quick">
       <span class="badge">{exercise.series}×{exercise.reps}</span>
+      {currentWeight > 0 && (
+        <span class="badge badge--weight">{currentWeight} kg</span>
+      )}
     </span>
     <span class="chevron" aria-hidden="true">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -38,5 +44,35 @@ const { exercise, index } = Astro.props;
       </div>
     </dl>
     <p class="exercise-notes">{exercise.notes}</p>
+
+    <div class="weight-row">
+      <label class="weight-label" for={`weight-${personId}-${dayId}-${index}`}>
+        Peso sesión anterior
+      </label>
+      <div class="weight-input-group">
+        <input
+          id={`weight-${personId}-${dayId}-${index}`}
+          class="weight-input"
+          type="number"
+          min="0"
+          step="0.5"
+          value={currentWeight}
+          data-person={personId}
+          data-day={dayId}
+          data-exercise-index={index}
+        />
+        <span class="weight-unit">kg</span>
+        <button
+          class="weight-save-btn"
+          data-person={personId}
+          data-day={dayId}
+          data-exercise-index={index}
+          aria-label="Guardar peso"
+        >
+          Guardar
+        </button>
+      </div>
+      <span class="weight-status" aria-live="polite"></span>
+    </div>
   </div>
 </li>

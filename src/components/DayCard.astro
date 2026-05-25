@@ -4,9 +4,10 @@ import ExerciseList from './ExerciseList.astro';
 
 interface Props {
   day: TrainingDay;
+  personId: string;
 }
 
-const { day } = Astro.props;
+const { day, personId } = Astro.props;
 ---
 
 <div class="day-card">
@@ -14,5 +15,5 @@ const { day } = Astro.props;
     <span class="day-name">{day.day}</span>
     <span class="day-label">{day.label}</span>
   </div>
-  <ExerciseList exercises={day.exercises} />
+  <ExerciseList exercises={day.exercises} personId={personId} dayId={day.day} />
 </div>

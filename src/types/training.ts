@@ -4,6 +4,7 @@ export interface Exercise {
   reps: string;
   rest: string;
   notes: string;
+  weight?: number;
 }
 
 export interface TrainingDay {

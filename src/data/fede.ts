@@ -14,6 +14,7 @@ export const fedeData: Person = {
           reps: '8-10',
           rest: '90s',
           notes: 'Movimiento principal. Entrena alternando con Belén',
+          weight: 0,
         },
         {
           name: 'Máquina Flyes de Pecho',
@@ -21,6 +22,7 @@ export const fedeData: Person = {
           reps: '12-15',
           rest: '60s',
           notes: 'Accesorio compartido. Contracción máxima al final',
+          weight: 0,
         },
         {
           name: 'Máquina Fondos Asistida',
@@ -28,6 +30,7 @@ export const fedeData: Person = {
           reps: '10-12',
           rest: '75s',
           notes: 'Mismo peso o ajustado. Excelente para tríceps',
+          weight: 0,
         },
         {
           name: 'Extensión Tríceps en Máquina',
@@ -35,6 +38,7 @@ export const fedeData: Person = {
           reps: '12-15',
           rest: '60s',
           notes: 'Aislamiento final. Foco en quemazón',
+          weight: 0,
         },
         {
           name: 'Press Militar Mancuerna',
@@ -42,6 +46,7 @@ export const fedeData: Person = {
           reps: '8-10',
           rest: '90s',
           notes: 'Bloque final si queda tiempo. Hombros anteriores',
+          weight: 0,
         },
       ],
     },
@@ -55,6 +60,7 @@ export const fedeData: Person = {
           reps: '8-10',
           rest: '120s',
           notes: 'Principal. Entrena junto a Belén (pie ancho para glúteos)',
+          weight: 0,
         },
         {
           name: 'Máquina Leg Curl (Isquios)',
@@ -62,6 +68,7 @@ export const fedeData: Person = {
           reps: '10-12',
           rest: '90s',
           notes: 'Juntos. Flexión de rodilla. Control excéntrico',
+          weight: 0,
         },
         {
           name: 'Máquina Extensoras Cuádriceps',
@@ -69,6 +76,7 @@ export const fedeData: Person = {
           reps: '12-15',
           rest: '75s',
           notes: 'Juntos. Aislamiento cuádriceps. Rango completo',
+          weight: 0,
         },
         {
           name: 'Máquina Abductores (Glúteos)',
@@ -76,6 +84,7 @@ export const fedeData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Accesorio. Hipertrofia glútea',
+          weight: 0,
         },
         {
           name: 'Prensa Pantorrillas',
@@ -83,6 +92,7 @@ export const fedeData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Accesorio final. Pantorrillas',
+          weight: 0,
         },
       ],
     },
@@ -96,6 +106,7 @@ export const fedeData: Person = {
           reps: '8-10',
           rest: '90s',
           notes: 'Principal. Juntos. Agarre ancho',
+          weight: 0,
         },
         {
           name: 'Máquina Remo Horizontal',
@@ -103,6 +114,7 @@ export const fedeData: Person = {
           reps: '8-10',
           rest: '90s',
           notes: 'Volumen espalda media. Peso controlado',
+          weight: 0,
         },
         {
           name: 'Curl de Bíceps Mancuerna',
@@ -110,6 +122,7 @@ export const fedeData: Person = {
           reps: '10-12',
           rest: '75s',
           notes: 'Juntos. Peso moderado. Controlado',
+          weight: 0,
         },
         {
           name: 'Máquina Remo Sentado (espalda baja)',
@@ -117,6 +130,7 @@ export const fedeData: Person = {
           reps: '12-15',
           rest: '75s',
           notes: 'Juntos. Accesorio espalda. Contracción fuerte',
+          weight: 0,
         },
         {
           name: 'Curl Máquina o Cable Bíceps',
@@ -124,6 +138,7 @@ export const fedeData: Person = {
           reps: '12-15',
           rest: '60s',
           notes: 'Accesorio. Aislamiento bíceps. Fallo muscular',
+          weight: 0,
         },
       ],
     },
@@ -137,6 +152,7 @@ export const fedeData: Person = {
           reps: '8-10',
           rest: '120s',
           notes: 'Estímulo diferente al martes. Pie más arriba',
+          weight: 0,
         },
         {
           name: 'Máquina Leg Curl Tumbado',
@@ -144,6 +160,7 @@ export const fedeData: Person = {
           reps: '10-12',
           rest: '90s',
           notes: 'Segundo isquios. Juntos',
+          weight: 0,
         },
         {
           name: 'Máquina Abductores (Glúteos)',
@@ -151,6 +168,7 @@ export const fedeData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Accesorio glúteos',
+          weight: 0,
         },
         {
           name: 'Máquina Abdominales',
@@ -158,6 +176,7 @@ export const fedeData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Core. Juntos',
+          weight: 0,
         },
       ],
     },

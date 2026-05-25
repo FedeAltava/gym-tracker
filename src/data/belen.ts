@@ -14,6 +14,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '90s',
           notes: 'Movimiento principal. Entrena alternando con Fede',
+          weight: 0,
         },
         {
           name: 'Máquina Flyes de Pecho',
@@ -21,6 +22,7 @@ export const belenData: Person = {
           reps: '12-15',
           rest: '60s',
           notes: 'Accesorio compartido. Contracción total',
+          weight: 0,
         },
         {
           name: 'Máquina Fondos Asistida',
@@ -28,6 +30,7 @@ export const belenData: Person = {
           reps: '12-15',
           rest: '75s',
           notes: 'Mismo peso o ajustado. Tríceps + pecho',
+          weight: 0,
         },
         {
           name: 'Extensión Tríceps en Máquina',
@@ -35,6 +38,7 @@ export const belenData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Aislamiento final. Quemazón',
+          weight: 0,
         },
         {
           name: 'Máquina Flyes Inversos (Deltoides Posterior)',
@@ -42,6 +46,7 @@ export const belenData: Person = {
           reps: '12-15',
           rest: '60s',
           notes: 'Bloque final. Hombros posteriores. Aislamiento',
+          weight: 0,
         },
       ],
     },
@@ -55,6 +60,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '120s',
           notes: 'Principal. Pie ancho para glúteos. Juntos con Fede',
+          weight: 0,
         },
         {
           name: 'Máquina Hip Thrust / Glute Press',
@@ -62,6 +68,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '90s',
           notes: 'Prioritario para preservación glútea en déficit',
+          weight: 0,
         },
         {
           name: 'Máquina Leg Curl (Isquios)',
@@ -69,6 +76,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '90s',
           notes: 'Juntos. Flexión rodilla. Volumen',
+          weight: 0,
         },
         {
           name: 'Máquina Extensoras Cuádriceps',
@@ -76,6 +84,7 @@ export const belenData: Person = {
           reps: '12-15',
           rest: '75s',
           notes: 'Juntos. Aislamiento cuádriceps',
+          weight: 0,
         },
         {
           name: 'Máquina Abductores (Glúteos)',
@@ -83,6 +92,7 @@ export const belenData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Accesorio. Quemazón. Más series que Fede',
+          weight: 0,
         },
       ],
     },
@@ -96,6 +106,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '90s',
           notes: 'Principal. Juntos. Agarre ancho',
+          weight: 0,
         },
         {
           name: 'Máquina Remo Horizontal',
@@ -103,6 +114,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '90s',
           notes: 'Volumen espalda media',
+          weight: 0,
         },
         {
           name: 'Curl de Bíceps Mancuerna',
@@ -110,6 +122,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '75s',
           notes: 'Juntos. Peso moderado',
+          weight: 0,
         },
         {
           name: 'Máquina Pájaros Inversos (Deltoides)',
@@ -117,6 +130,7 @@ export const belenData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Solo Belén. Hombros posteriores. Aislamiento',
+          weight: 0,
         },
         {
           name: 'Máquina Remo Sentado (espalda baja)',
@@ -124,6 +138,7 @@ export const belenData: Person = {
           reps: '12-15',
           rest: '75s',
           notes: 'Juntos. Accesorio espalda',
+          weight: 0,
         },
       ],
     },
@@ -137,6 +152,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '120s',
           notes: 'Estímulo diferente al martes. Juntos',
+          weight: 0,
         },
         {
           name: 'Máquina Leg Curl Tumbado',
@@ -144,6 +160,7 @@ export const belenData: Person = {
           reps: '10-12',
           rest: '90s',
           notes: 'Segundo isquios. Juntos',
+          weight: 0,
         },
         {
           name: 'Máquina Abductores (Glúteos)',
@@ -151,6 +168,7 @@ export const belenData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Accesorio glúteos',
+          weight: 0,
         },
         {
           name: 'Máquina Abdominales',
@@ -158,6 +176,7 @@ export const belenData: Person = {
           reps: '20-25',
           rest: '60s',
           notes: 'Core. Juntos con Fede',
+          weight: 0,
         },
         {
           name: 'Cable Rotaciones (Woodchops)',
@@ -165,6 +184,7 @@ export const belenData: Person = {
           reps: '15-20',
           rest: '60s',
           notes: 'Si queda tiempo. Core funcional',
+          weight: 0,
         },
       ],
     },
